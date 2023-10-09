@@ -10,7 +10,7 @@ export default function Home() {
         alt="Abstract background"
       />
       <Sidebar />
-      <div className="w-80 bg-white m-auto p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+      <div className="w-80 bg-white m-auto p-4 py-8 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
         <ActiveStepForm />
       </div>
     </>

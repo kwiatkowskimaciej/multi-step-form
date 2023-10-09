@@ -1,10 +1,10 @@
 'use client';
 
 import { useFormState } from '@/providers/FormContext';
-import { PersonalInfo } from './PersonalInfo';
-import { SelectPlan } from './SelectPlan';
-import { AddOns } from './AddOns';
-import { Summary } from './Summary';
+import { PersonalInfo } from './form-steps/PersonalInfo';
+import { SelectPlan } from './form-steps/SelectPlan';
+import { AddOns } from './form-steps/AddOns';
+import { Summary } from './form-steps/Summary';
 
 export function ActiveStepForm() {
   const { step } = useFormState();

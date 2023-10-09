@@ -1,4 +1,5 @@
 import { useFormState } from '@/providers/FormContext';
+import { StepsNavigation } from '../StepsNavigation';
 
 export function PersonalInfo() {
   const { formData, setFormData, handleNext, handleBack } = useFormState();
@@ -9,7 +10,7 @@ export function PersonalInfo() {
   return (
     <>
       <h1 className="font-bold text-2xl text-marine-blue">Personal info</h1>
-      <p className="text-cool-gray mb-4">
+      <p className="text-cool-gray mt-2 mb-5">
         Please provide your name, email address, and phone number.
       </p>
       <form onSubmit={handleSubmit}>
@@ -45,14 +46,7 @@ export function PersonalInfo() {
             placeholder="e.g. +1 234 567 890"
           />
         </div>
-        <div
-          className="fixed bg-white bottom-0 left-0 w-full h-20 p-4 flex justify-end items-center
-        "
-        >
-          <button className="h-10 bg-marine-blue text-white px-4 rounded-md">
-            Next Step
-          </button>
-        </div>
+        <StepsNavigation />
       </form>
     </>
   );
