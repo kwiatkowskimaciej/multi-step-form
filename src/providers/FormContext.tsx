@@ -15,6 +15,8 @@ interface IFormContext {
   handleNext: () => void;
   handleBack: () => void;
   step: number;
+  monthly: boolean;
+  setMonthly: Dispatch<SetStateAction<any>>;
 }
 
 const FormContext = createContext<IFormContext>({
@@ -23,11 +25,14 @@ const FormContext = createContext<IFormContext>({
   handleNext: () => {},
   handleBack: () => {},
   step: 0,
+  monthly: true,
+  setMonthly: () => {},
 });
 
 export function FormProvider({ children }: { children: ReactNode }) {
   let [formData, setFormData] = useState();
   let [step, setStep] = useState(1);
+  let [monthly, setMonthly] = useState(true);
 
   function handleNext() {
     setStep((current) => current + 1);
@@ -39,7 +44,15 @@ export function FormProvider({ children }: { children: ReactNode }) {
 
   return (
     <FormContext.Provider
-      value={{ formData, setFormData, step, handleNext, handleBack }}
+      value={{
+        formData,
+        setFormData,
+        step,
+        handleNext,
+        handleBack,
+        monthly,
+        setMonthly,
+      }}
     >
       {children}
     </FormContext.Provider>

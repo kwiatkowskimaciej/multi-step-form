@@ -1,30 +1,28 @@
 import { useFormState } from '@/providers/FormContext';
 import { StepsNavigation } from '../StepsNavigation';
-import { AddOneCard } from '../add-ons/AddOneCard';
+import { AddOneCard } from '../add-ons/AddOnCard';
 
 const addOns = [
   {
     name: 'Online service',
     description: 'Access to multiplayer games',
-    monthly: '+$1/mo',
-    yearly: '+$10/yr',
+    price: 1,
   },
   {
     name: 'Larger storage',
     description: 'Extra 1TB of cloud save',
-    monthly: '+$2/mo',
-    yearly: '+$20/yr',
+    price: 2,
   },
   {
     name: 'Customizable Profile',
     description: 'Custom theme on your profile',
-    monthly: '+$2/mo',
-    yearly: '+$20/yr',
+    price: 2,
   },
 ];
 
 export function AddOns() {
-  const { formData, setFormData, handleNext, handleBack } = useFormState();
+  const { formData, setFormData, handleNext, handleBack, monthly } =
+    useFormState();
   const handleSubmit = () => {
     handleNext();
   };
@@ -37,7 +35,7 @@ export function AddOns() {
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-4">
           {addOns.map((addOne, index) => {
-            return <AddOneCard {...addOne} />;
+            return <AddOneCard {...addOne} monthly={monthly} />;
           })}
         </div>
         <StepsNavigation />

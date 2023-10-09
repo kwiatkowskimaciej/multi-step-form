@@ -2,6 +2,7 @@ import { FormProvider } from '@/providers/FormContext';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Ubuntu } from 'next/font/google';
+import 'material-symbols';
 
 const ubuntu = Ubuntu({
   weight: ['400', '500', '700'],
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className + ' h-[100dvh] bg-magnolia'}>
+      <body className={ubuntu.className + ' bg-magnolia'}>
         <FormProvider>{children}</FormProvider>
       </body>
     </html>

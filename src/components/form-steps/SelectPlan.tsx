@@ -28,9 +28,9 @@ const plans = [
 ];
 
 export function SelectPlan() {
-  const { formData, setFormData, handleNext, handleBack } = useFormState();
+  const { formData, setFormData, handleNext, handleBack, monthly, setMonthly } =
+    useFormState();
   const [selectedPlan, setSelectedPlan] = useState('Arcade');
-  const [monthly, setMonthly] = useState(true);
 
   const handleSubmit = () => {
     handleNext();
