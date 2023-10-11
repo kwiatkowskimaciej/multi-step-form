@@ -3,31 +3,32 @@ import { twMerge } from 'tailwind-merge';
 
 interface Props {
   name: string;
-  monthlyPrice: string;
-  yearlyPrice: string;
+  price: number;
   icon: string;
-  selectedPlan: string;
+  selectedPlan: {
+    name: string;
+    price: number;
+  };
   setSelectedPlan: Dispatch<SetStateAction<any>>;
   monthly: boolean;
 }
 
 export function PlanCard({
   name,
-  monthlyPrice,
-  yearlyPrice,
+  price,
   icon,
   selectedPlan,
   setSelectedPlan,
   monthly,
 }: Props) {
   const handleChange = () => {
-    setSelectedPlan(name);
+    setSelectedPlan({ name: name, price: price });
   };
   return (
     <label
       className={twMerge(
-        'flex p-4 border border-light-gray rounded-lg gap-4',
-        selectedPlan === name ? 'bg-alabaster border-purplish-blue' : null
+        'flex p-4 border border-light-gray rounded-lg gap-4 hover:border-purplish-blue',
+        selectedPlan.name === name ? 'bg-alabaster border-purplish-blue' : null
       )}
     >
       <div>
@@ -36,7 +37,7 @@ export function PlanCard({
           <div>
             <span className="font-medium text-marine-blue">{name}</span>
             <p className="text-cool-gray text-sm">
-              {monthly ? monthlyPrice : yearlyPrice}
+              +${monthly ? `${price}/mo` : `${price * 10}/yr`}
             </p>
           </div>
         </div>

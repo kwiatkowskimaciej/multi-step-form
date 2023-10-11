@@ -14,7 +14,7 @@ export function Sidebar() {
           <div
             key={stepName}
             className={twMerge(
-              'w-8 h-8 border border-white rounded-full flex justify-center items-center text-white',
+              'w-8 h-8 border border-white rounded-full flex justify-center items-center text-white cursor-pointer',
               step === index + 1
                 ? 'bg-light-blue text-purplish-blue border-light-blue'
                 : null

@@ -9,7 +9,7 @@ interface Props {
 export function PeriodicitySwitch({ toggle, setToggle }: Props) {
   const toggleClass = 'transform translate-x-5';
   return (
-    <div className="flex justify-center items-center h-12 w-full bg-alabaster gap-4 mt-6 font-medium">
+    <div className="flex justify-center items-center h-12 w-full bg-magnolia rounded-md gap-4 mt-6 font-medium">
       <span className={toggle ? 'text-marine-blue' : 'text-cool-gray'}>
         Monthly
       </span>

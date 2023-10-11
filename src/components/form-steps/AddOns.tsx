@@ -1,6 +1,7 @@
 import { useFormState } from '@/providers/FormContext';
 import { StepsNavigation } from '../StepsNavigation';
-import { AddOneCard } from '../add-ons/AddOnCard';
+import { AddOnCard } from '../add-ons/AddOnCard';
+import Heading from '../Heading';
 
 const addOns = [
   {
@@ -14,28 +15,31 @@ const addOns = [
     price: 2,
   },
   {
-    name: 'Customizable Profile',
+    name: 'Customizable profile',
     description: 'Custom theme on your profile',
     price: 2,
   },
 ];
 
+const heading = {
+  title: 'Pick add-ons',
+  subtitle: 'Add-ons help enhance your gaming experience.',
+};
+
 export function AddOns() {
-  const { formData, setFormData, handleNext, handleBack, monthly } =
-    useFormState();
+  const { handleNext, monthly } = useFormState();
+
   const handleSubmit = () => {
     handleNext();
   };
+
   return (
     <>
-      <h1 className="font-bold text-2xl text-marine-blue">Pick add-ons</h1>
-      <p className="text-cool-gray mt-2 mb-5">
-        Add-ons help enhance your gaming experience.
-      </p>
+      <Heading {...heading} />
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-4">
           {addOns.map((addOne, index) => {
-            return <AddOneCard {...addOne} monthly={monthly} />;
+            return <AddOnCard key={index} {...addOne} monthly={monthly} />;
           })}
         </div>
         <StepsNavigation />

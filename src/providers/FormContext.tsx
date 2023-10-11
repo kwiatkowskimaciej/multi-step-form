@@ -30,7 +30,29 @@ const FormContext = createContext<IFormContext>({
 });
 
 export function FormProvider({ children }: { children: ReactNode }) {
-  let [formData, setFormData] = useState();
+  let [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    plan: {
+      name: '',
+      price: null,
+    },
+    addOns: {
+      'Online service': {
+        selected: false,
+        price: 1,
+      },
+      'Larger storage': {
+        selected: false,
+        price: 2,
+      },
+      'Customizable profile': {
+        selected: false,
+        price: 2,
+      },
+    },
+  });
   let [step, setStep] = useState(1);
   let [monthly, setMonthly] = useState(true);
 
