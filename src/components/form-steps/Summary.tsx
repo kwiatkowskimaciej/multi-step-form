@@ -36,14 +36,14 @@ export function Summary() {
   return (
     <>
       <Heading {...heading} />
-      <div className="bg-magnolia rounded-xl p-4 ">
+      <div className="bg-alabaster rounded-xl p-4 ">
         <div className="flex justify-between items-center">
           <div className="flex flex-col">
             <span className="font-semibold text-marine-blue">
               {formData.plan.name} ({monthly ? 'monthly' : 'yearly'})
             </span>
             <span
-              className="underline text-sm text-cool-gray hover:text-purplish-blue"
+              className="underline text-sm text-cool-gray hover:text-purplish-blue cursor-pointer"
               onClick={() => {
                 handleBack();
                 handleBack();
@@ -79,8 +79,8 @@ export function Summary() {
         <div className="text-cool-gray">
           Total (per {monthly ? 'month' : 'year'})
         </div>
-        <div className="text-purplish-blue font-bold">
-          +$
+        <div className="text-purplish-blue font-bold lg:text-xl">
+          $
           {monthly
             ? calculateTotalPrice(formData)
             : calculateTotalPrice(formData) * 10}

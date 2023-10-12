@@ -36,7 +36,7 @@ export function AddOnCard({ name, description, price, monthly }: Props) {
     <div>
       <label
         className={twMerge(
-          'flex items-center p-4 border border-light-gray rounded-lg gap-4 add-on-label hover:border-purplish-blue',
+          'flex items-center p-4 border border-light-gray rounded-lg gap-4 add-on-label hover:border-purplish-blue cursor-pointer',
           selected ? 'border-purplish-blue bg-alabaster' : null
         )}
       >

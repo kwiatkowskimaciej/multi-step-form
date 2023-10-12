@@ -20,8 +20,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ubuntu.className + ' bg-magnolia'}>
-        <FormProvider>{children}</FormProvider>
+      <body
+        className={
+          ubuntu.className +
+          ' bg-magnolia lg:h-[100dvh] lg:w-full lg:flex lg:items-center lg:justify-center'
+        }
+      >
+        <div>
+          <FormProvider>{children}</FormProvider>
+        </div>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 import { ActiveStepForm } from '@/components/ActiveStepForm';
 import { Sidebar } from '@/components/Sidebar';
-import { StepsNavigation } from '@/components/StepsNavigation';
 
 export default function Home() {
   return (
@@ -11,13 +10,13 @@ export default function Home() {
         alt="Abstract background"
       />
       <Sidebar />
-      <div className="min-w-80 m-4 bg-white p-4 py-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] lg:w-[940px] lg:m-auto lg:flex lg:gap-24 lg:relative">
+      <div className="min-w-80 m-4 bg-white p-4 py-6 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] lg:w-[940px] lg:m-auto lg:flex lg:gap-24 lg:relative lg:p-6">
         <img
-          className="hidden lg:block lg:z-10"
+          className="hidden lg:block"
           src="bg-sidebar-desktop.svg"
           alt="Abstract background"
         />
-        <div>
+        <div className="lg:box-border lg:relative lg:w-full lg:mr-24">
           <ActiveStepForm />
         </div>
       </div>

@@ -58,7 +58,7 @@ export function PersonalInfo() {
           </div>
           <input
             className={twMerge(
-              'h-10 border border-light-gray rounded-md pl-4 mb-4 focus:outline-purplish-blue focus:outline-1',
+              'h-10 border border-light-gray rounded-md pl-4 mb-4 focus:outline-purplish-blue focus:outline-1 lg:h-12 hover:border-purplish-blue cursor-pointer',
               formik.errors.name ? 'border-strawberry-red' : null
             )}
             type="text"
@@ -81,7 +81,7 @@ export function PersonalInfo() {
           </div>
           <input
             className={twMerge(
-              'h-10 border border-light-gray rounded-md pl-4 mb-4 focus:outline-purplish-blue focus:outline-1',
+              'h-10 border border-light-gray rounded-md pl-4 mb-4 focus:outline-purplish-blue focus:outline-1 lg:h-12 hover:border-purplish-blue cursor-pointer',
               formik.errors.email ? 'border-strawberry-red' : null
             )}
             type="email"
@@ -104,8 +104,8 @@ export function PersonalInfo() {
           </div>
           <input
             className={twMerge(
-              'h-10 border border-light-gray rounded-md pl-4 mb-4 focus:outline-purplish-blue focus:outline-1',
-              formik.errors.email ? 'border-strawberry-red' : null
+              'h-10 border border-light-gray rounded-md pl-4 mb-4 focus:outline-purplish-blue focus:outline-1 lg:h-12 hover:border-purplish-blue cursor-pointer',
+              formik.errors.phone ? 'border-strawberry-red' : null
             )}
             type="tel"
             name="phone"

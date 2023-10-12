@@ -2,7 +2,7 @@
 
 import { useFormState } from '@/providers/FormContext';
 import { StepsNavigation } from '../StepsNavigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { PlanCard } from '../select-plan/PlanCard';
 import { PeriodicitySwitch } from '../select-plan/PeriodicitySwitch';
 import Heading from '../Heading';
@@ -46,7 +46,7 @@ export function SelectPlan() {
     <>
       <Heading {...heading} />
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 lg:flex-row">
           {plans.map((plan, index) => {
             return (
               <PlanCard
