@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Multi-Step Form]([https://your-live-site-url.com](https://multi-step-form-gilt-two.vercel.app))
 
 ## My process
 
@@ -58,4 +58,4 @@ And I finally learned how to make multi-step form :).
 
 ## Author
 
-- Frontend Mentor - [@kwiatkowskimaciej](https://www.frontendmentor.io/profile/kwiatkowskimacieje)
+- Frontend Mentor - [@kwiatkowskimaciej](https://www.frontendmentor.io/profile/kwiatkowskimaciej)
